@@ -8,27 +8,27 @@ Hi there! This is a very simple demo of what [Electron](http://electron.atom.io/
 
 # Building
 
-1. Clone this repo.
+Clone this repo.
 ```shell
 git clone https://github.com/robertjmarlow/electron-demo
 ```
-2. Change working directory.
+Change working directory.
 ```shell
 cd electron-demo
 ```
-3. Check out a branch.
+Check out a branch.
 ```shell
 git checkout Hello-Electron
 ```
-4. Install the node modules.
+Install the node modules.
 ```shell
 npm install
 ```
-5. (optional but recommended) Install Electron globally
+(optional but recommended) Install Electron globally
 ```shell
 npm install -g electron
 ```
-6. Run the application!
+Run the application!
 ```shell
 electron .
 ```
