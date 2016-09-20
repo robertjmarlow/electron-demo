@@ -2,14 +2,19 @@
   "name": "electron-demo",
   "version": "1.0.0",
   "description": "A simple demo of Electron",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "test"
   },
   "keywords": [
     "electron",
-    "demo"
+    "demo",
+    "webpack"
   ],
   "author": "Rob Marlow",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robertjmarlow/electron-demo"
+  }
 }
