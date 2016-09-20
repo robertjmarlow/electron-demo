@@ -28,7 +28,11 @@ npm install
 ```shell
 npm install -g electron
 ```
-Run the application!
+Run the webpack dev server
+```shell
+npm run dev
+```
+(in another command window) Run the application!
 ```shell
 electron .
 ```
