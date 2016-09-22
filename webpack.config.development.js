@@ -26,7 +26,7 @@ module.exports = {
     ]
   },
 
-  // this tells webpack that we're building an electorn app
+  // this tells webpack that we're building an electron app
   target: 'electron',
 
   plugins: [
