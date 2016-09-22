@@ -5,6 +5,8 @@
   "main": "main.js",
   "scripts": {
     "dev": "webpack-dev-server --config ./webpack.config.development.js",
+    "build-dev": "webpack --config ./webpack.config.development.js",
+    "build-prod": "webpack --config ./webpack.config.prod.js",
     "pack-win": "electron-packager . ElectronTest --asar --asar-unpack=protocol-link.html --overwrite --platform=win32 --arch=ia32 --icon=assets/ico/app-icon.ico --prune=true --out=out --version-string.CompanyName='MarlowSoft' --version-string.FileDescription='Simple Electron Test' --version-string.ProductName='Simple Electron Test'",
     "pack-linux": "electron-packager . --asar --asar-unpack=protocol-link.html --overwrite --platform=linux --arch=x64 --icon=assets/png/app-icon.png --prune=true --out=out"
   },
