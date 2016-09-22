@@ -4,7 +4,9 @@
   "description": "A simple demo of Electron",
   "main": "main.js",
   "scripts": {
-    "dev": "webpack-dev-server --config ./webpack.config.development.js"
+    "dev": "webpack-dev-server --config ./webpack.config.development.js",
+    "pack-win": "electron-packager . ElectronTest --asar --asar-unpack=protocol-link.html --overwrite --platform=win32 --arch=ia32 --icon=assets/ico/app-icon.ico --prune=true --out=out --version-string.CompanyName='MarlowSoft' --version-string.FileDescription='Simple Electron Test' --version-string.ProductName='Simple Electron Test'",
+    "pack-linux": "electron-packager . --asar --asar-unpack=protocol-link.html --overwrite --platform=linux --arch=x64 --icon=assets/png/app-icon.png --prune=true --out=out"
   },
   "keywords": [
     "electron",
@@ -21,7 +23,9 @@
     "babel": "^6.5.2",
     "babel-core": "^6.14.0",
     "babel-loader": "^6.2.5",
+    "babel-polyfill": "^6.13.0",
     "css-loader": "^0.25.0",
+    "electron-packager": "^8.0.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.15.1"

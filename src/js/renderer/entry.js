@@ -5,11 +5,12 @@ require('../../css/main.css');
 
 $(document).ready(function() {
   ipcRenderer.on('getFileContents', function(event, arg) {
-    $('#dir-contents').append('<div class="fileContents">' + arg.toString().replace(/\n/g, '<br/>').replace(/ /g, '&nbsp') + '</div>');
+    $('#file-contents').append('<div class="fileContents">' + arg.toString().replace(/\n/g, '<br/>').replace(/ /g, '&nbsp') + '</div>');
   });
 
   ipcRenderer.on('getDirectoryContents', function(event, arg) {
-    $('#file-contents').append('<div class="fileList">' + arg + '</div>');
+    // yes, this was broken in the last checkin...
+    $('#dir-contents').append('<div class="fileList">' + arg + '</div>');
   });
 
   ipcRenderer.send('getFileContents', './main.js');
