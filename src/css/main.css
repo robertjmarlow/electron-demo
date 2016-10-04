@@ -1,4 +1,16 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+h1 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
 .fileContents {
+  font-family: monospace;
+}
+
+.dirContents {
   font-family: monospace;
 }
 
