@@ -2,7 +2,7 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: {
-    app: ['webpack/hot/dev-server', './src/js/renderer/entry.js'],
+    app: ['webpack/hot/dev-server', './src/jsx/entry.jsx'],
   },
 
   output: {
@@ -21,7 +21,7 @@ module.exports = {
 
   module: {
     loaders: [
-      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
+      { test: /\.jsx?$/, loader: 'babel-loader', exclude: /node_modules/ },
       { test: /\.css$/, loader: 'style-loader!css-loader' }
     ]
   },
