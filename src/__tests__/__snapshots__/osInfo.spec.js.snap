@@ -1,0 +1,19 @@
+exports[`test Displays OS info 1`] = `
+<div>
+  <span
+    className="big">
+    Platform:
+  </span>
+   
+  Platform
+   
+  Arch
+   
+  <span
+    className="big">
+    Uptime:
+  </span>
+   
+  9001
+</div>
+`;

@@ -1,0 +1,5 @@
+exports[`test Says hello 1`] = `
+<div>
+  Hello React!
+</div>
+`;
