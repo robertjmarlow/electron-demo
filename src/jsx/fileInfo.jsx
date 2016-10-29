@@ -7,40 +7,38 @@ export default class FileInfo extends React.Component {
     super();
 
     this.state = {
-      fileContentsArr: []
+      fileContentsArr: [],
     };
   }
 
-  componentDidMount() {    
-    ipcRenderer.on('getFileContents', function(event, arg) {
-      var fileContentsArr = [];
+  componentDidMount() {
+    ipcRenderer.on('getFileContents', (event, arg) => {
+      const fileContentsArr = [];
 
-      arg.toString().split('\n').forEach(function(element) {
+      arg.toString().split('\n').forEach((element) => {
         fileContentsArr.push({
-          line: element,
-          id: uniqueId()
+          line: (element.length === 0 ? ' ' : element),
+          id: uniqueId(),
         });
       });
 
       this.setState({
-        fileContentsArr: fileContentsArr
+        fileContentsArr,
       });
-    }.bind(this));
+    });
 
     ipcRenderer.send('getFileContents', './main.js');
   }
 
   render() {
-    var fileLines = this.state.fileContentsArr.map(function(item) {
-      return (
-        <div key={item.id}>{item.line.replace(/ /g, '\u00a0')}</div>
-      );
-    });
+    const fileLines = this.state.fileContentsArr.map(item =>
+      <div key={item.id}>{item.line.replace(/ /g, '\u00a0')}</div>
+    );
 
     return (
-      <div className='fileContents'>
+      <div className="fileContents">
         {fileLines}
       </div>
     );
   }
-};
+}

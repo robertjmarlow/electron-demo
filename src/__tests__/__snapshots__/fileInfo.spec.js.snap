@@ -1,0 +1,29 @@
+exports[`File Info shows file contents 1`] = `
+<div
+  className="fileContents">
+  <div>
+    this
+  </div>
+  <div>
+     
+  </div>
+  <div>
+     
+  </div>
+  <div>
+     
+  </div>
+  <div>
+     
+  </div>
+  <div>
+     
+  </div>
+  <div>
+    is a file
+  </div>
+  <div>
+    with some stuff in it.
+  </div>
+</div>
+`;

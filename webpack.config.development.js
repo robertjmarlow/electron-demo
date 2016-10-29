@@ -19,6 +19,10 @@ module.exports = {
   // enable sourcemaps for debugging webpack's output.
   devtool: 'source-map',
 
+  resolve: {
+    extensions: ['', '.js', '.jsx']
+  },
+
   module: {
     loaders: [
       { test: /\.jsx?$/, loader: 'babel-loader', exclude: /node_modules/ },

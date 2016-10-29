@@ -1,11 +1,13 @@
-const React = require('react')
-const ReactDOM = require('react-dom')
-require('../css/main.css');
+/* global document */
 
-import Hello from './hello.jsx'
-import OsInfo from './osInfo.jsx'
-import FileInfo from './fileInfo.jsx'
-import DirInfo from './dirInfo.jsx'
+import Hello from './hello';
+import OsInfo from './osInfo';
+import FileInfo from './fileInfo';
+import DirInfo from './dirInfo';
+
+const React = require('react');
+const ReactDOM = require('react-dom');
+require('../css/main.css');
 
 ReactDOM.render(<Hello />, document.getElementById('react-stuff'));
 ReactDOM.render(<OsInfo />, document.getElementById('os-stuff'));

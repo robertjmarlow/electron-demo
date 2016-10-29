@@ -7,10 +7,10 @@ module.exports = {
    * @param {function} callback The function to call once the file is read.
    * The parameter to the callback will be the file's contents.
    */
-  getContents: function(filePath, callback) {
+  getContents: (filePath, callback) => {
     fs.readFile(filePath, (err, data) => {
       if (err) {
-        console.log('getContents had a bit of a problem: ' + err);
+        console.log(`getContents had a bit of a problem: ${err}`); // eslint-disable-line no-console
       }
 
       callback(data);
@@ -22,13 +22,13 @@ module.exports = {
    * @param {function} callback The function to call once the directory is read.
    * The parameter to the callback will be the directory's contents.
    */
-  getDirectoryContents: function(dirPath, callback) {
+  getDirectoryContents: (dirPath, callback) => {
     fs.readdir(dirPath, {}, (err, files) => {
       if (err) {
-        console.log('getDirectoryContents had a bit of a problem: ' + err);
+        console.log(`getDirectoryContents had a bit of a problem: ${err}`);  // eslint-disable-line no-console
       }
 
       callback(files);
     });
-  }
+  },
 };

@@ -7,38 +7,36 @@ export default class DirInfo extends React.Component {
     super();
 
     this.state = {
-      dirContentsArr: []
+      dirContentsArr: [],
     };
   }
 
   componentDidMount() {
-    ipcRenderer.on('getDirectoryContents', function(event, arg) {
-      var dirContentsArr = [];
+    ipcRenderer.on('getDirectoryContents', (event, arg) => {
+      const dirContentsArr = [];
 
-      for (let dirItem of arg) {
+      for (const dirItem of arg) {
         dirContentsArr.push({
-          dirItem: dirItem,
-          id: uniqueId()
+          dirItem,
+          id: uniqueId(),
         });
       }
 
       this.setState({
-        dirContentsArr: dirContentsArr
+        dirContentsArr,
       });
-    }.bind(this));
+    });
 
     ipcRenderer.send('getDirectoryContents', '.');
   }
 
   render() {
-    var dirLines = this.state.dirContentsArr.map(function(item) {
-      return (
-        <div key={item.id}>{item.dirItem}</div>
-      );
-    });
-    
+    const dirLines = this.state.dirContentsArr.map(item =>
+      <div key={item.id}>{item.dirItem}</div>
+    );
+
     return (
-      <div className='dirContents'>
+      <div className="dirContents">
         {dirLines}
       </div>
     );
